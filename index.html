@@ -16,16 +16,18 @@
 body{font-family:Lato,system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.55;-webkit-font-smoothing:antialiased}
 h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--black);line-height:1.15}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-header{background:var(--black);border-bottom:3px solid var(--gold)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+header{background:#fff;border-bottom:3px solid var(--gold);box-shadow:0 2px 14px rgba(26,26,26,.06)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:8px;padding-bottom:8px}
 .brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
 .brand img{height:48px}
 .brand .script{font-family:"Great Vibes",cursive;font-size:32px;color:var(--gold);line-height:1}
 .brand .caps{font-size:10px;letter-spacing:.38em;color:#fff;display:block;margin-top:2px}
-.brand .divider{width:1px;height:38px;background:#5a5040}
-.brand .brk{font-size:11px;letter-spacing:.14em;color:#cfc3a3;text-transform:uppercase}
-.hdr-phone{color:var(--cream);font-size:14px;text-decoration:none;white-space:nowrap}
-.hdr-phone b{color:var(--gold)}
+.brand .divider{width:1px;height:46px;background:var(--line)}
+.brand .brk{font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.logo-crop{width:91px;height:96px;overflow:hidden;position:relative;flex:0 0 91px}
+.logo-crop img{position:absolute!important;width:131px!important;height:131px!important;left:-22px;top:-14px;max-width:none}
+.hdr-phone{color:var(--black);font-size:14px;text-decoration:none;white-space:nowrap}
+.hdr-phone b{color:var(--gold-dk)}
 main{padding:34px 0 50px}
 .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(26,26,26,.06);padding:34px 30px;position:relative;overflow:hidden}
 .card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--gold-dk),var(--gold),#d6b46a)}
@@ -119,7 +121,7 @@ footer b{color:var(--cream)}
 <header>
   <div class="wrap">
     <div class="brand" id="brand">
-      <div><span class="script">Rosanna</span><span class="caps">SELLS VEGAS</span></div>
+      <div class="logo-crop"><img src="BEE-Logo-Print%20.png" alt="Rosanna Sells Vegas"></div>
       <span class="divider"></span>
       <span class="brk">LIFE Realty District</span>
     </div>
