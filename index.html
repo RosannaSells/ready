@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Las Vegas First-Time Buyer Readiness Score | Rosanna Sells Vegas</title>
+<meta name="description" content="Take the 2-minute First-Time Buyer Readiness Score and get a personalized step-by-step plan for buying your first home in Las Vegas or Henderson.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#A87E28; --gold-dk:#8C5F16; --black:#1A1A1A; --cream:#FAF0D2;
+  --ivory:#FFFCF4; --ink:#2b2b2b; --muted:#6d6658; --line:#e7dcc0;
+  --radius:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Lato,system-ui,sans-serif;color:var(--ink);background:var(--ivory);line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--black);line-height:1.15}
+.wrap{max-width:760px;margin:0 auto;padding:0 20px}
+header{background:var(--black);border-bottom:3px solid var(--gold)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+.brand{display:flex;align-items:center;gap:14px;color:#fff;text-decoration:none}
+.brand img{height:48px}
+.brand .script{font-family:"Great Vibes",cursive;font-size:32px;color:var(--gold);line-height:1}
+.brand .caps{font-size:10px;letter-spacing:.38em;color:#fff;display:block;margin-top:2px}
+.brand .divider{width:1px;height:38px;background:#5a5040}
+.brand .brk{font-size:11px;letter-spacing:.14em;color:#cfc3a3;text-transform:uppercase}
+.hdr-phone{color:var(--cream);font-size:14px;text-decoration:none;white-space:nowrap}
+.hdr-phone b{color:var(--gold)}
+main{padding:34px 0 50px}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px rgba(26,26,26,.06);padding:34px 30px;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--gold-dk),var(--gold),#d6b46a)}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dk);font-weight:700;margin-bottom:10px}
+.hero h1{font-size:clamp(32px,6vw,46px);margin-bottom:14px}
+.hero h1 em{color:var(--gold);font-style:italic}
+.lede{font-size:17px;color:var(--muted);margin-bottom:22px;max-width:580px}
+.perks{list-style:none;display:grid;gap:10px;margin:0 0 26px}
+.perks li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.perks li:before{content:"";flex:0 0 18px;height:18px;margin-top:3px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/12px no-repeat}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--black);color:#fff;border:2px solid var(--black);font:700 16px Lato,sans-serif;padding:15px 28px;border-radius:999px;cursor:pointer;transition:.2s;text-decoration:none}
+.btn:hover{background:var(--gold-dk);border-color:var(--gold-dk)}
+.btn.gold{background:var(--gold);border-color:var(--gold)}
+.btn.gold:hover{background:var(--gold-dk);border-color:var(--gold-dk)}
+.btn.ghost{background:transparent;color:var(--black)}
+.btn.ghost:hover{background:var(--cream);color:var(--black)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.micro{font-size:13px;color:var(--muted);margin-top:12px}
+.trust{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px;padding-top:22px;border-top:1px solid var(--line)}
+.trust div{font-size:13px;color:var(--muted)}
+.trust b{display:block;font-family:"Cormorant Garamond",serif;font-size:28px;color:var(--black);line-height:1}
+.progress{height:6px;background:var(--cream);border-radius:9px;overflow:hidden;margin-bottom:8px}
+.progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .35s}
+.qmeta{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin-bottom:22px}
+.qtitle{font-size:clamp(25px,4.6vw,32px);margin-bottom:6px}
+.qhelp{color:var(--muted);font-size:15px;margin-bottom:20px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:#fff;border:1.5px solid var(--line);border-radius:12px;padding:15px 16px;font:400 16px Lato,sans-serif;color:var(--ink);cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--gold);background:#fffaf0}
+.opt.sel{border-color:var(--gold);background:var(--cream);box-shadow:inset 0 0 0 1px var(--gold)}
+.opt .dot{flex:0 0 20px;height:20px;border-radius:50%;border:2px solid #cbbd98}
+.opt.multi .dot{border-radius:5px}
+.opt.sel .dot{border-color:var(--gold);background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5 10.5l3 3 7-7' stroke='white' stroke-width='2.6' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") center/13px no-repeat}
+.qnav{display:flex;justify-content:space-between;align-items:center;margin-top:24px;gap:10px}
+.link{background:none;border:none;color:var(--muted);font:400 15px Lato,sans-serif;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.teaser{display:grid;grid-template-columns:140px 1fr;gap:22px;align-items:center;margin-bottom:24px}
+.ring{width:140px;height:140px;position:relative}
+.ring svg{transform:rotate(-90deg)}
+.ring .num{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:700;color:var(--black);line-height:1}
+.ring .num small{font:400 12px Lato,sans-serif;color:var(--muted);letter-spacing:.1em;margin-top:4px}
+.blur{filter:blur(6px);user-select:none}
+.tier{display:inline-block;background:var(--black);color:var(--cream);font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:8px}
+form{display:grid;gap:14px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{font-size:13px;font-weight:700;color:var(--black);display:block;margin-bottom:5px}
+input[type=text],input[type=email],input[type=tel],input[type=number]{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:13px 14px;font:16px Lato,sans-serif;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(168,126,40,.15)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;color:var(--muted);line-height:1.45}
+.consent input{margin-top:3px;accent-color:var(--gold);width:16px;height:16px;flex:0 0 16px}
+.err{color:#a3341f;font-size:13px;min-height:1em}
+.lock{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.hp{position:absolute!important;left:-10000px!important;top:auto;width:1px;height:1px;overflow:hidden}
+.res-head{display:grid;grid-template-columns:150px 1fr;gap:24px;align-items:center;margin-bottom:26px}
+.res-head h2{font-size:clamp(26px,5vw,34px);margin-bottom:6px}
+.steps{list-style:none;counter-reset:s;display:grid;gap:14px;margin:8px 0 30px}
+.steps li{counter-increment:s;display:grid;grid-template-columns:40px 1fr;gap:14px;background:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:16px}
+.steps li:before{content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font:700 18px "Cormorant Garamond",serif}
+.steps h3{font-size:21px;margin-bottom:3px}
+.steps p{font-size:15px;color:var(--muted)}
+.section-t{font-size:26px;margin:6px 0 4px}
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+.calc-out{background:var(--black);color:#fff;border-radius:12px;padding:22px;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:baseline}
+.calc-out .big{font-family:"Cormorant Garamond",serif;font-size:44px;color:var(--gold);grid-column:1/-1;line-height:1}
+.calc-out span{font-size:14px;color:#cfc3a3}
+.calc-out b{font-size:15px;text-align:right}
+.note{font-size:12.5px;color:var(--muted);margin-top:10px}
+.cta-box{margin-top:30px;background:var(--cream);border:1px solid #e2cf9a;border-radius:var(--radius);padding:26px;text-align:center}
+.cta-box h3{font-size:28px;margin-bottom:6px}
+.cta-box p{color:var(--muted);margin-bottom:18px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.contact-line{margin-top:12px;font-size:14px;color:var(--ink)}
+footer{background:var(--black);color:#bdb29a;font-size:12px;padding:26px 0;text-align:center;line-height:1.7}
+footer b{color:var(--cream)}
+.eho{display:inline-flex;align-items:center;gap:6px;margin-top:6px}
+.hidden{display:none!important}
+.fade{animation:fade .35s ease}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.spinner{width:46px;height:46px;border:4px solid var(--cream);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite;margin:10px auto 18px}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (max-width:600px){
+  .card{padding:28px 20px}
+  .row,.calc{grid-template-columns:1fr}
+  .teaser,.res-head{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .brand .brk,.brand .divider{display:none}
+  .hdr-phone{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand" id="brand">
+      <div><span class="script">Rosanna</span><span class="caps">SELLS VEGAS</span></div>
+      <span class="divider"></span>
+      <span class="brk">LIFE Realty District</span>
+    </div>
+    <a class="hdr-phone" href="tel:7023284816">Call/Text <b>702.328.4816</b></a>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+  <section class="card hero fade" id="s-intro">
+    <div class="eyebrow">Free · 2 Minutes · Las Vegas &amp; Henderson</div>
+    <h1>Could you own your first home <em>sooner than you think?</em></h1>
+    <p class="lede">Answer 8 quick questions and get your First-Time Buyer Readiness Score, plus a step-by-step plan built around where you are today. No pressure, no lender pull on your credit.</p>
+    <ul class="perks">
+      <li>Your personal readiness score and what it means</li>
+      <li>The next 3–4 moves that actually get you closer to the keys</li>
+      <li>Whether Nevada down payment assistance could be worth a look</li>
+      <li>A monthly payment estimator you can play with using your own numbers</li>
+    </ul>
+    <button class="btn gold" id="startBtn">Get My Readiness Score →</button>
+    <p class="micro">Takes about 2 minutes. Your answers stay private.</p>
+    <div class="trust">
+      <div><b>14+</b>years helping buyers</div>
+      <div><b>100+</b>homes closed</div>
+      <div><b>150+</b>clients served</div>
+      <div><b>Las Vegas</b>native</div>
+    </div>
+  </section>
+
+  <section class="card hidden" id="s-quiz">
+    <div class="progress"><span id="bar"></span></div>
+    <div class="qmeta"><span id="qcount">Question 1 of 8</span><span id="qpct">0%</span></div>
+    <div id="qbody" class="fade"></div>
+    <div class="qnav">
+      <button class="link" id="backBtn">← Back</button>
+      <button class="btn" id="nextBtn" disabled>Next →</button>
+    </div>
+  </section>
+
+  <section class="card hidden" id="s-calc" style="text-align:center">
+    <div class="spinner"></div>
+    <h2 style="font-size:28px">Building your plan…</h2>
+    <p class="micro" id="calcMsg">Reviewing your timeline and savings</p>
+  </section>
+
+  <section class="card hidden fade" id="s-gate">
+    <div class="teaser">
+      <div class="ring" id="ringTeaser"></div>
+      <div>
+        <div class="tier" id="tierTeaser">—</div>
+        <h2 style="font-size:clamp(25px,4.8vw,32px);margin-bottom:6px">Your score is ready.</h2>
+        <p class="lede" style="margin:0;font-size:16px">Tell me where to send it and you'll see your full score and your personalized next-step plan right away.</p>
+      </div>
+    </div>
+    <form id="leadForm" novalidate>
+      <div class="row">
+        <div><label for="fname">First name</label><input type="text" id="fname" autocomplete="given-name" required></div>
+        <div><label for="lname">Last name</label><input type="text" id="lname" autocomplete="family-name"></div>
+      </div>
+      <div class="row">
+        <div><label for="email">Email</label><input type="email" id="email" autocomplete="email" required></div>
+        <div><label for="phone">Mobile phone</label><input type="tel" id="phone" autocomplete="tel" placeholder="(702) 555-0123" required></div>
+      </div>
+      <div class="hp" aria-hidden="true"><label for="website">Website</label><input type="text" id="website" name="website" tabindex="-1" autocomplete="off"></div>
+      <label class="consent"><input type="checkbox" id="consent">
+        <span>Yes, Rosanna Bieszczat with LIFE Realty District may contact me by call, text, or email about my home search, including by automated means. Consent isn't a condition of any purchase. Msg &amp; data rates may apply. Reply STOP to opt out.</span>
+      </label>
+      <div class="err" id="formErr"></div>
+      <button class="btn gold" type="submit" id="submitBtn">Show My Score &amp; Plan →</button>
+      <div class="lock">🔒 Your information is never sold or shared with third parties.</div>
+    </form>
+  </section>
+
+  <section class="card hidden fade" id="s-results">
+    <div class="res-head">
+      <div class="ring" id="ringFull"></div>
+      <div>
+        <div class="tier" id="tierFull">—</div>
+        <h2 id="resTitle">—</h2>
+        <p id="resSummary" style="color:var(--muted)"></p>
+      </div>
+    </div>
+
+    <h3 class="section-t">Your next moves</h3>
+    <ol class="steps" id="steps"></ol>
+
+    <h3 class="section-t">Play with the monthly payment</h3>
+    <p style="color:var(--muted);font-size:15px">Plug in your own numbers. Your lender gives you your real rate and costs. This is just a way to get a feel for the math.</p>
+    <div class="calc">
+      <div><label for="cPrice">Home price ($)</label><input type="number" id="cPrice" value="400000" min="0" step="5000"></div>
+      <div><label for="cDown">Down payment (%)</label><input type="number" id="cDown" value="3.5" min="0" max="100" step="0.5"></div>
+      <div><label for="cRate">Interest rate (%)</label><input type="number" id="cRate" value="6.5" min="0" step="0.125"></div>
+      <div><label for="cTerm">Loan term (years)</label><input type="number" id="cTerm" value="30" min="5" max="40" step="5"></div>
+      <div><label for="cTaxIns">Taxes + insurance ($/mo)</label><input type="number" id="cTaxIns" value="300" min="0" step="25"></div>
+      <div><label for="cHoa">HOA ($/mo)</label><input type="number" id="cHoa" value="0" min="0" step="10"></div>
+    </div>
+    <div class="calc-out">
+      <div class="big" id="oTotal">$0</div>
+      <span>Estimated monthly payment</span><b></b>
+      <span>Principal &amp; interest</span><b id="oPI">$0</b>
+      <span>Taxes + insurance + HOA</span><b id="oOther">$0</b>
+      <span>Down payment</span><b id="oDown">$0</b>
+      <span>Loan amount</span><b id="oLoan">$0</b>
+    </div>
+    <p class="note">The numbers above are examples you can change, not a quote. Mortgage insurance, which most loans with under 20% down require, isn't included. Not a loan offer or commitment to lend. Talk with a licensed lender for your actual figures.</p>
+
+    <div class="cta-box">
+      <h3>Let's map out your path, together.</h3>
+      <p>Book a free 20-minute First-Time Buyer Strategy Call. We'll go over your plan, talk about which parts of the valley fit your life, and line up your next step. No pressure, no obligation.</p>
+      <div class="cta-row">
+        <a class="btn gold" id="bookBtn" href="#" target="_blank" rel="noopener">Book My Free Strategy Call</a>
+        <a class="btn ghost" href="sms:7023284816">Text Rosanna</a>
+      </div>
+      <p class="contact-line">Or call/text <b>702.328.4816</b> · RosannaSellsVegas@gmail.com</p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <b>Rosanna Bieszczat, REALTOR®</b> · LIFE Realty District · NV DRE# S.0174211<br>
+    2225 Villagewalk Dr, Suite 260, Henderson, NV 89052 · 702.328.4816 · RosannaSellsVegas.com<br>
+    This tool is for educational purposes only and isn't financial, credit, or lending advice. Down payment assistance programs, eligibility, and amounts are set by the program administrators and change over time; confirm details with a participating lender.<br>
+    <span class="eho">
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path fill="#bdb29a" d="M12 2 1 11h3v11h16V11h3L12 2zm5 17H7v-8l5-4.2 5 4.2v8zM9 13h6v1.6H9zm0 3h6v1.6H9z"/></svg>
+      Equal Housing Opportunity
+    </span>
+  </div>
+</footer>
+
+<script>
+const CONFIG = {
+  WEBHOOK_URL: "https://script.google.com/macros/s/AKfycbwiLOQB74gv9iWyqMc_0KtU4E_cuqBbJnVY9XLtUYnQufr7C2PiAYa8AD4TWBGvuVs6/exec",
+  BOOKING_URL: "https://www.rosannasellsvegas.com",
+  LOGO_SRC: "",
+  SOURCE_TAG: "FTHB Readiness Score",
+  MIN_SECONDS: 8
+};
+
+const Q = [
+  { id:"timeline", t:"When would you love to be in your own home?", h:"No wrong answers. This just shapes your plan.",
+    o:[["Within 3 months",20,"0-3"],["3–6 months",16,"3-6"],["6–12 months",10,"6-12"],["Just exploring for now",4,"12+"]]},
+  { id:"lender", t:"Have you talked with a lender yet?", h:"Pre-approval is usually the first real step.",
+    o:[["Yes, I'm pre-approved",25,"preapproved"],["I've been pre-qualified online",15,"prequal"],["I've had a casual conversation",8,"talked"],["Not yet",2,"none"]]},
+  { id:"credit", t:"Roughly where do you think your credit score lands?", h:"A ballpark is fine. Nothing here checks your credit.",
+    o:[["700 or higher",20,"700+"],["640 – 699",15,"640-699"],["580 – 639",9,"580-639"],["Under 580",4,"<580"],["Honestly, not sure",7,"unsure"]]},
+  { id:"savings", t:"How much have you set aside for down payment and closing costs?", h:"Think of it as a share of the price you have in mind.",
+    o:[["5% or more of the price",25,"5+"],["About 3–5%",19,"3-5"],["Some savings, under 3%",11,"<3"],["Just getting started",4,"0"]]},
+  { id:"dpa", t:"Have you looked into down payment assistance?", h:"Nevada has state-run programs many buyers never hear about.",
+    o:[["Yes, I've researched it",10,"yes"],["I've heard of it, not sure if I qualify",6,"heard"],["No, I didn't know it existed",3,"no"]]},
+  { id:"housing", t:"What's your current living situation?", h:"Helps time your move so you're not paying twice.",
+    o:[["Renting, lease ends within 3 months",0,"lease-0-3"],["Renting, lease ends in 3–6 months",0,"lease-3-6"],["Renting, lease ends in 6+ months or month-to-month",0,"lease-6+"],["Not currently renting",0,"not-renting"]]},
+  { id:"worry", t:"What feels like the biggest hurdle right now?", h:"Pick the one that's on your mind most.",
+    o:[["Saving enough up front",0,"savings"],["My credit",0,"credit"],["Not knowing where to start",0,"start"],["Competing with other buyers",0,"compete"],["Knowing what monthly payment I can handle",0,"payment"]]},
+  { id:"areas", multi:true, t:"Which areas are you curious about?", h:"Choose as many as you like.",
+    o:[["Henderson / Green Valley",0,"Henderson"],["Inspirada",0,"Inspirada"],["Summerlin",0,"Summerlin"],["Southwest Las Vegas",0,"SW Las Vegas"],["North Las Vegas",0,"North Las Vegas"],["Not sure yet, show me options",0,"Open"]]}
+];
+const TOTAL = Q.length;
+
+let i = 0; const A = {};
+let startedAt = Date.now(); let leadSent = false;
+const $ = id => document.getElementById(id);
+const show = id => { ["s-intro","s-quiz","s-calc","s-gate","s-results"].forEach(s=>$(s).classList.add("hidden")); $(id).classList.remove("hidden"); window.scrollTo({top:0,behavior:"smooth"}); };
+
+if (CONFIG.LOGO_SRC) $("brand").innerHTML = `<img src="${CONFIG.LOGO_SRC}" alt="Rosanna Sells Vegas | LIFE Realty District">`;
+$("bookBtn").href = CONFIG.BOOKING_URL;
+
+$("startBtn").onclick = () => { startedAt = Date.now(); show("s-quiz"); render(); };
+$("backBtn").onclick = () => { if (i===0){ show("s-intro"); return;} i--; render(); };
+$("nextBtn").onclick = next;
+
+function render(){
+  const q = Q[i];
+  $("bar").style.width = (i/TOTAL*100)+"%";
+  $("qcount").textContent = `Question ${i+1} of ${TOTAL}`;
+  $("qpct").textContent = Math.round(i/TOTAL*100)+"%";
+  const sel = A[q.id];
+  $("qbody").innerHTML = `<h2 class="qtitle">${q.t}</h2><p class="qhelp">${q.h}</p><div class="opts">${
+    q.o.map((o,k)=>{ const on = q.multi ? (sel||[]).includes(k) : sel===k;
+      return `<button class="opt ${q.multi?'multi':''} ${on?'sel':''}" data-k="${k}"><span class="dot"></span>${o[0]}</button>`}).join("")
+  }</div>`;
+  $("qbody").classList.remove("fade"); void $("qbody").offsetWidth; $("qbody").classList.add("fade");
+  $("nextBtn").disabled = q.multi ? !(sel&&sel.length) : sel===undefined;
+  $("nextBtn").textContent = i===TOTAL-1 ? "See My Score →" : "Next →";
+  $("qbody").querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
+    const k = +b.dataset.k;
+    if (q.multi){ const s = A[q.id]||[]; A[q.id] = s.includes(k)? s.filter(x=>x!==k) : [...s,k]; render(); }
+    else { A[q.id]=k; render(); setTimeout(next,260); }
+  });
+}
+function next(){
+  const q=Q[i]; if (q.multi ? !(A[q.id]&&A[q.id].length) : A[q.id]===undefined) return;
+  if (i<TOTAL-1){ i++; render(); } else calculate();
+}
+
+const val = id => { const q=Q.find(x=>x.id===id); return q.o[A[id]][2]; };
+function score(){ return ["timeline","lender","credit","savings","dpa"].reduce((s,id)=>{const q=Q.find(x=>x.id===id);return s+q.o[A[id]][1];},0); }
+function tier(s){
+  if (s>=75) return {key:"ready",label:"Ready to Shop",title:"You're closer than most first-time buyers.",
+    sum:"You've already done a lot of the groundwork. The next step is sharpening your strategy so you're ready to move confidently when the right home comes up."};
+  if (s>=50) return {key:"almost",label:"Almost There",title:"You're on your way. A few moves will make a big difference.",
+    sum:"You have real momentum. Closing a couple of gaps now can open up more options and make the whole process feel a lot less stressful."};
+  return {key:"building",label:"Building Your Foundation",title:"Every homeowner started right where you are.",
+    sum:"The best time to plan is before you're in a rush. Here's a clear, realistic path from today to your first set of keys."};
+}
+function priority(s){
+  const t = val("timeline");
+  if ((t==="0-3"||t==="3-6") && s>=55) return "P1";
+  if (t!=="12+") return "P2";
+  return "P3";
+}
+function plan(){
+  const st=[];
+  const lender=val("lender"), credit=val("credit"), sav=val("savings"), dpa=val("dpa"), hous=val("housing"), worry=val("worry"), t=val("timeline");
+  if (lender!=="preapproved") st.push(["Get fully pre-approved, not just pre-qualified",
+    "A pre-approval means a lender has actually reviewed your income, assets, and credit. It tells you your real price range and makes your offer stronger. I can connect you with lenders who work with first-time buyers every day."]);
+  if (credit==="unsure"||credit==="<580"||credit==="580-639") st.push(["Get clear on your credit picture",
+    "Loan programs have different credit guidelines, and small changes can open up better options. A lender can show you exactly where you stand and which steps move the needle fastest."]);
+  if (sav!=="5+"||dpa!=="yes") st.push(["See if Nevada down payment assistance fits",
+    "The Nevada Housing Division runs state programs, like Home Is Possible, that can help with down payment and closing costs for qualified buyers. Eligibility and amounts change, so a participating lender confirms what you'd qualify for."]);
+  if (hous==="lease-0-3"||hous==="lease-3-6") st.push(["Line up your move with your lease",
+    "Buying a home typically takes 30–45 days once you're under contract, plus shopping time. We'll work backward from your lease date so you're not stuck paying rent and a mortgage at the same time."]);
+  if (worry==="compete") st.push(["Build an offer strategy before you need one",
+    "The strongest first-time buyers know their terms, timelines, and walk-away number before they tour. We'll set that up together so you can move with confidence instead of pressure."]);
+  if (worry==="payment") st.push(["Find your comfortable payment, not just your max",
+    "What a lender approves and what feels good every month aren't always the same. Use the estimator below, then we'll fine-tune it with your lender's real numbers."]);
+  if (worry==="start"||st.length<2) st.push(["Get a roadmap of the whole process",
+    "From pre-approval to inspection to closing day, knowing what's coming takes the stress out of it. I walk every first-time buyer through it step by step, in plain English."]);
+  st.push([t==="12+"?"Start touring on your own schedule":"Tour a few homes and neighborhoods",
+    "Seeing homes in person is the fastest way to learn what you love, what you can skip, and which parts of the valley fit your daily life."]);
+  return st.slice(0,4);
+}
+
+function ring(el,s,blur){
+  const r=60,c=2*Math.PI*r;
+  el.innerHTML=`<svg width="140" height="140"><circle cx="70" cy="70" r="${r}" fill="none" stroke="#FAF0D2" stroke-width="12"/>
+  <circle id="${el.id}-arc" cx="70" cy="70" r="${r}" fill="none" stroke="#A87E28" stroke-width="12" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c}" style="transition:stroke-dashoffset 1.2s ease"/></svg>
+  <div class="num ${blur?'blur':''}">${s}<small>OUT OF 100</small></div>`;
+  requestAnimationFrame(()=>setTimeout(()=>{ $(el.id+"-arc").style.strokeDashoffset = c*(1-s/100); },60));
+}
+
+let S,T;
+function calculate(){
+  $("bar").style.width="100%";
+  show("s-calc");
+  const msgs=["Reviewing your timeline and savings","Checking which programs may fit","Putting your plan together"];
+  let m=0; const iv=setInterval(()=>{ m++; if(m<msgs.length) $("calcMsg").textContent=msgs[m]; },650);
+  setTimeout(()=>{ clearInterval(iv);
+    S=score(); T=tier(S);
+    ring($("ringTeaser"),S,true);
+    $("tierTeaser").textContent=T.label;
+    show("s-gate");
+  },2000);
+}
+
+$("leadForm").addEventListener("submit", async e=>{
+  e.preventDefault();
+  if (leadSent) return;
+  const f=$("fname").value.trim(), em=$("email").value.trim(), ph=$("phone").value.replace(/\D/g,"");
+  if(!f) return $("formErr").textContent="Please add your first name.";
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)) return $("formErr").textContent="Please enter a valid email.";
+  if(ph.length<10) return $("formErr").textContent="Please enter a 10-digit mobile number.";
+  $("formErr").textContent="";
+  leadSent = true;
+  $("submitBtn").disabled=true; $("submitBtn").textContent="One moment…";
+
+  const isBot = $("website").value.trim() !== "" || (Date.now()-startedAt) < CONFIG.MIN_SECONDS*1000;
+
+  const lead = {
+    source: CONFIG.SOURCE_TAG,
+    submitted_at: new Date().toISOString(),
+    page: location.href,
+    first_name: f, last_name: $("lname").value.trim(), email: em, phone: ph,
+    contact_consent: $("consent").checked,
+    readiness_score: S, readiness_tier: T.label, lead_priority: priority(S),
+    timeline: Q[0].o[A.timeline][0], lender_status: Q[1].o[A.lender][0],
+    credit_range: Q[2].o[A.credit][0], savings: Q[3].o[A.savings][0],
+    dpa_awareness: Q[4].o[A.dpa][0], living_situation: Q[5].o[A.housing][0],
+    biggest_hurdle: Q[6].o[A.worry][0],
+    areas_of_interest: (A.areas||[]).map(k=>Q[7].o[k][2]).join(", ")
+  };
+  if (isBot) {
+    console.log("Submission filtered as spam.");
+  } else if (CONFIG.WEBHOOK_URL){
+    try{ await fetch(CONFIG.WEBHOOK_URL,{method:"POST",mode:"no-cors",headers:{"Content-Type":"text/plain"},body:JSON.stringify(lead)}); }catch(err){ console.warn("Lead send failed",err); }
+  } else { console.log("[Preview mode] Lead not sent:", lead); }
+  showResults(f);
+});
+
+function showResults(first){
+  ring($("ringFull"),S,false);
+  $("tierFull").textContent=T.label;
+  $("resTitle").textContent = `${first}, ${T.title.charAt(0).toLowerCase()+T.title.slice(1)}`;
+  $("resSummary").textContent=T.sum;
+  $("steps").innerHTML=plan().map(s=>`<li><div><h3>${s[0]}</h3><p>${s[1]}</p></div></li>`).join("");
+  show("s-results"); calc();
+}
+
+const money = n => "$"+Math.round(n).toLocaleString();
+function calc(){
+  const P=+$("cPrice").value||0, d=(+$("cDown").value||0)/100, r=(+$("cRate").value||0)/100/12, n=(+$("cTerm").value||30)*12;
+  const loan=P*(1-d), pi = r? loan*r/(1-Math.pow(1+r,-n)) : loan/n;
+  const other=(+$("cTaxIns").value||0)+(+$("cHoa").value||0);
+  $("oTotal").textContent=money(pi+other)+"/mo"; $("oPI").textContent=money(pi);
+  $("oOther").textContent=money(other); $("oDown").textContent=money(P*d); $("oLoan").textContent=money(loan);
+}
+["cPrice","cDown","cRate","cTerm","cTaxIns","cHoa"].forEach(id=>$(id).addEventListener("input",calc));
+</script>
+</body>
+</html>
