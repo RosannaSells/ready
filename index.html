@@ -24,8 +24,9 @@ header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1
 .brand .caps{font-size:10px;letter-spacing:.38em;color:#fff;display:block;margin-top:2px}
 .brand .divider{width:1px;height:46px;background:var(--line)}
 .brand .brk{font-size:11px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
-.logo-crop{width:91px;height:96px;overflow:hidden;position:relative;flex:0 0 91px}
-.logo-crop img{position:absolute!important;width:131px!important;height:131px!important;left:-22px;top:-14px;max-width:none}
+.logo-bee{display:block;width:72px;height:80px;flex:0 0 72px;background:url("Gold%20Logos.png") -2px -28px/182px 182px no-repeat}
+.hdr-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.logo-life{display:block;width:76px;height:52px;background:url("Gold%20Logos.png") -79px -36px/155px 155px no-repeat}
 .hdr-phone{color:var(--black);font-size:14px;text-decoration:none;white-space:nowrap}
 .hdr-phone b{color:var(--gold-dk)}
 main{padding:34px 0 50px}
@@ -121,11 +122,12 @@ footer b{color:var(--cream)}
 <header>
   <div class="wrap">
     <div class="brand" id="brand">
-      <div class="logo-crop"><img src="BEE-Logo-Print%20.png" alt="Rosanna Sells Vegas"></div>
-      <span class="divider"></span>
-      <span class="brk">LIFE Realty District</span>
+      <span class="logo-bee" role="img" aria-label="Rosanna Sells Vegas"></span>
     </div>
-    <a class="hdr-phone" href="tel:7023284816">Call/Text <b>702.328.4816</b></a>
+    <div class="hdr-right">
+      <span class="logo-life" role="img" aria-label="LIFE Realty District"></span>
+      <a class="hdr-phone" href="tel:7023284816">Call/Text <b>702.328.4816</b></a>
+    </div>
   </div>
 </header>
 
